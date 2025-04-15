@@ -2,15 +2,27 @@
 ## Coding Guidelines ##
 ### Local variables ###
 Use <code>var</code> when the return type can be derived by the compiler. Use the type when creating an instance.
-<pre>
+<pre>  
+  // Correct
   var userId = BusinessEnvironment.Instance.CurrentContext.UserId;
+  // Wrong. Guid is unambiguous
+  Guid? userId = BusinessEnvironment.Instance.CurrentContext.UserId;
 
+  // Preferred
   UserRoles userRoles = new()
   {
     RoleId = role.Id,
     UserId = userId?.ToString()
   }
+  // Not preferred
+  var userRoles = new UserRoles()
+  {
+    RoleId = role.Id,
+    UserId = userId?.ToString()
+  }
 </pre>
+not
+Guid? userId = BusinessEnvironment.Instance.CurrentContext.UserId;
 
 ### Commments ###
 Should have space after the two slashes and start with capital letter. No final period needed
