@@ -131,6 +131,12 @@ git remote prune origin
 git checkout <HASH_OF_COMMIT> -- "<RELATIVE_PATH_TO_FILE>"
 </pre>
 
+### Check out a single file from another branch and rename it ###
+Works best if already in the correct folder where the file that should be checked out is in the local branch, and where the checked out copy should be stored.
+<pre>
+git show <OTHER_BRANCH>:./<FILE_NAME> > <OTHER_FILE_NAME>
+</pre>
+
 ### Set another editor as default editor ###
 Notepad++
 <pre>
