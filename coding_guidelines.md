@@ -33,7 +33,7 @@ Should have space after the two slashes and start with capital letter. No final 
 ### Fields ###
 Use underscores for private fields
 <pre>
-    private readonly IAccessHelper _accessHelper;
+private readonly IAccessHelper _accessHelper;
 </pre>
 
 ### String type ###
