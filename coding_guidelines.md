@@ -42,10 +42,16 @@ Prefer <code>string</code> over <code>String</code>.
 ### Closing brackets ###
 Always leave a blank line after a closing bracket, except when the next line is also a closing bracket or an <code>else</code>, <code>catch</code> statement.
 <pre>
-  if (doesProjectExistForOtherTenant)
-  {
-      return Forbidden<InitializationResponse>(ErrorConstants.PROJECT_ALREADY_EXISTS_WITH_OTHER_TENANT);
-  }
+if (doesProjectExistForOtherTenant)
+{
+    return Forbidden<InitializationResponse>(ErrorConstants.PROJECT_ALREADY_EXISTS_WITH_OTHER_TENANT);
+}
 
-   return Success<InitializationResponse>(Constants.INIT_PERFORMED_SUCCESSFULLY);
+return Success<InitializationResponse>(Constants.INIT_PERFORMED_SUCCESSFULLY);
+</pre>
+
+### Constants ###
+Use all caps and underscores
+<pre>
+public const string FILE_LIST_NOT_FOUND = "File list not found";
 </pre>
