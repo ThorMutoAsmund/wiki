@@ -97,6 +97,11 @@ git stash -k -u
 <pre>
 git stash pop
 </pre>
+### Apply named stash but do not drop it ###
+<pre>
+git stash apply stash^{/&lt;STASH_NAME&gt;}
+</pre>
+
 ### Force push master to the remote server ###
 <pre>
 git push --force
