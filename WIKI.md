@@ -14,7 +14,7 @@ git reset --hard HEAD~1
 ### Merge in a feature branch after a rebase and keep the "loop" ###
 On master:
 <pre>
-git merge --no-ff <FEATURE_BRANCH>
+git merge --no-ff &lt;FEATURE_BRANCH&gt;
 </pre>
 ### Pull in changes from master on the remote server while on a feature branch and rebase that branch on the new master head ###
 On feature branch:
@@ -23,11 +23,11 @@ git pull --rebase origin master
 </pre>
 ### Push feature branch to the remote server ###
 <pre>
-git push -u origin <FEATURE_BRANCH>
+git push -u origin &lt;FEATURE_BRANCH&gt;
 </pre>
 ### Remove feature branch from the remote server ###
 <pre>
-git push origin --delete <FEATURE_BRANCH>
+git push origin --delete &lt;FEATURE_BRANCH&gt;
 </pre>
 ### Add changes to latest commit and keep the original commit message ###
 <pre>
@@ -59,15 +59,15 @@ git tag --sort=-creatordate
 </pre>
 ### Create tag and push ###
 <pre>
-git tag -a <TAG_NAME> -m "<TAG_MESSAGE>" && git push --tags
+git tag -a &lt;TAG_NAME&gt; -m "&lt;TAG_MESSAGE&gt;" && git push --tags
 </pre>
 ### Delete local tag ###
 <pre>
-git tag --delete <TAG_NAME>
+git tag --delete &lt;TAG_NAME&gt;
 </pre>
 ### Delete remote tag ###
 <pre>
-git push --delete origin <TAG_NAME>
+git push --delete origin &lt;TAG_NAME&gt;
 </pre>
 ### List all tags with annotations ###
 <pre>
@@ -79,11 +79,11 @@ git for-each-ref --sort=creatordate --format '%(refname)' refs/tags
 </pre>
 ### Rename branch ###
 <pre>
-git branch -m <OLD_NAME> <NEW_NAME>
+git branch -m &lt;OLD_NAME&gt; &lt;NEW_NAME&gt;
 </pre>
 or rename the current branch
 <pre>
-git branch -m <NEW_NAME>
+git branch -m &lt;NEW_NAME&gt;
 </pre>
 ### Stash away changes (and remove them from working dir) ###
 <pre>
@@ -104,7 +104,7 @@ git push --force
 
 ### Force push branch (e.g. a detached head) to the master branch on the remote server ###
 <pre>
-git push origin +<HASH_OF_COMMIT_TO_BE_NEW_MASTER>:master
+git push origin +&lt;HASH_OF_COMMIT_TO_BE_NEW_MASTER&gt;:master
 </pre>
 then
 <pre>
@@ -113,7 +113,7 @@ git reset --hard origin/master
 to update the local master
 ### Change a remote's URL ###
 <pre>
-git remote set-url <REMOTE_NAME> <NEW_URL>
+git remote set-url &lt;REMOTE_NAME&gt; &lt;NEW_URL&gt;
 </pre>
 for instance
 <pre>
@@ -128,7 +128,7 @@ git remote prune origin
 
 ### Restore a single file from another commit ###
 <pre>
-git checkout <HASH_OF_COMMIT> -- "<RELATIVE_PATH_TO_FILE>"
+git checkout &lt;HASH_OF_COMMIT&gt; -- "&lt;RELATIVE_PATH_TO_FILE&gt;"
 </pre>
 
 ### Check out a single file from another branch and rename it ###
@@ -163,7 +163,7 @@ Edit the global config. Add extra lines in the [alias] section, e.g.:
 </pre>
 The global gitconfig can usually be found here:
 <pre>
-C:\Users\<username>\.gitconfig
+C:\Users\&lt;username&gt;\.gitconfig
 </pre>
 ### Instruct GIT to store credentials for this repo ###
 <pre>
@@ -172,12 +172,12 @@ git config credential.helper store
 
 ### Create list of commit info between commits ###
 <pre>
-git log <TAG_OR_HASH_OF_FIRST_COMMIT>..<TAG_OR_HASH_OF_SECOND_COMMIT>
+git log &lt;TAG_OR_HASH_OF_FIRST_COMMIT&gt;..&lt;TAG_OR_HASH_OF_SECOND_COMMIT&gt;
 </pre>
 
 ### Dump list of commit messages between commits to a file only showing the body ###
 <pre>
-git log <TAG_OR_HASH_OF_FIRST_COMMIT>..<TAG_OR_HASH_OF_SECOND_COMMIT> --format="%B" > log.txt
+git log &lt;TAG_OR_HASH_OF_FIRST_COMMIT&gt;..&lt;TAG_OR_HASH_OF_SECOND_COMMIT&gt; --format="%B" &gt; log.txt
 </pre>
 
 ### Ignore changes to a specific file (e.g. the build date file) ###
@@ -214,7 +214,7 @@ Make sure domain.com is in your hosts file. On Windows this can be achived by ru
 <pre>@ECHO OFF
 SET NEWLINE=^& echo.
 FIND /C /I "domain.com" %WINDIR%\system32\drivers\etc\hosts
-IF %ERRORLEVEL% NEQ 0 ECHO %NEWLINE%^123.123.123.123 domain.com>>%WINDIR%\System32\drivers\etc\hosts</pre>
+IF %ERRORLEVEL% NEQ 0 ECHO %NEWLINE%^123.123.123.123 domain.com&gt;&gt;%WINDIR%\System32\drivers\etc\hosts</pre>
 
 ### Installing Git the first time ###
 Please select the option "Checkout as-is, commit as-is". Contrary to common belief, Windows '''does''' support text files with LF [[Line-Endings]]. You never need the CR character for anything. Run these two commands before downloading ("cloning") any repos:
