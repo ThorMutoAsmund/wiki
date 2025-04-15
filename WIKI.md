@@ -134,7 +134,7 @@ git checkout <HASH_OF_COMMIT> -- "<RELATIVE_PATH_TO_FILE>"
 ### Check out a single file from another branch and rename it ###
 Works best if already in the correct folder where the file that should be checked out is in the local branch, and where the checked out copy should be stored.
 <pre>
-git show <OTHER_BRANCH>:./<FILE_NAME> > <OTHER_FILE_NAME>
+git show &lt;OTHER_BRANCH&gt;:./&lt;FILE_NAME&gt; &gt; &lt;OTHER_FILE_NAME&gt;
 </pre>
 
 ### Set another editor as default editor ###
