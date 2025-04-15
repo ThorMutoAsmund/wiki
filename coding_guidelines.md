@@ -23,8 +23,6 @@ Use <code>var</code> when the return type can be derived by the compiler. Use th
     UserId = userId?.ToString()
   }
 </pre>
-not
-Guid? userId = BusinessEnvironment.Instance.CurrentContext.UserId;
 
 ### Commments ###
 Should have space after the two slashes and start with capital letter. No final period needed
